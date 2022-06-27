@@ -5,6 +5,7 @@ export default function Home() {
     <div>
       <h1>app-productos</h1>
       <Link href='/products/create'>Crear producto</Link>
+      <Link href='/products/create'>Ver base de datos</Link>
     </div>
   )
 }
