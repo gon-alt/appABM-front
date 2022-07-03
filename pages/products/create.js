@@ -57,7 +57,7 @@ function Create() {
         </form>
         <div>
         <Link href='/'><button>Volver al inicio</button></Link>
-        <a href='/products/getDB'><button>Ver base de datos</button></a>
+        <Link href='/products/getDB'><button>Ver base de datos</button></Link>
         </div>
       </div>
       <style jsx>
