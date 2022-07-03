@@ -6,7 +6,7 @@ export async function getStaticProps(context) {
 
   if (!data) {
     return {
-      // notFound: true, // Devolverá la página 404
+      notFound: true, // Devolverá la página 404
       redirect: {
         destination: '/',
         permanent: false,
