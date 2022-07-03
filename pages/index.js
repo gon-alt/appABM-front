@@ -6,8 +6,11 @@ export default function Home() {
       <div>
 
       <h1>app-productos</h1>
-        <button><h2><Link href='/products/create'>Crear producto</Link></h2></button>
-        <button><h2><Link href="/products/getDB">Ver base de datos</Link></h2></button> 
+
+      
+      <Link href='/products/create'><button><h2>Crear producto</h2></button></Link>
+      <Link href='/products/delete'><button><h2>Eliminar producto</h2></button></Link>
+      <a href='/products/getDB'><button><h2>Ver base de datos</h2></button></a>
 
       </div>
       <style jsx>
@@ -25,8 +28,9 @@ export default function Home() {
             margin-bottom: 0.5rem;
           }
 
-          h1 {
+          a, h1 {
             text-align: center;
+            text-decoration: none;
           }       
         `}
       </style>

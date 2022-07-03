@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from 'next/link'
 
 const initialState = { name: '', price: 0 }
 function Create() {
@@ -54,21 +55,34 @@ function Create() {
           />
           <button onClick={handleClick}>Crear producto</button>
         </form>
+        <div>
+        <Link href='/'><button>Volver al inicio</button></Link>
+        <a href='/products/getDB'><button>Ver base de datos</button></a>
+        </div>
       </div>
       <style jsx>
         {`
-          form {
+          form, button {
             display: flex;
             flex-direction: column;
             width: 20rem;
             margin: 0 auto;
+            text-decoration: none;
           }
 
           input {
             margin-bottom: 0.5rem;
           }
 
-          h1 {
+          Link, a{
+            display: flex;
+            flex-direction: column;
+            width: 20rem;
+            margin: 0 auto;
+            text-decoration: none;
+          }
+          
+          h1{
             text-align: center;
           }
         `}
