@@ -1,4 +1,4 @@
-import {useRouter} from 'next/router'
+// import {useRouter} from 'next/router'
 import Link from 'next/link'
 
 export async function getStaticProps(context) {
@@ -28,7 +28,7 @@ export async function getStaticProps(context) {
   
 }
 function index({ data }){
-  const router = useRouter();
+  // const router = useRouter();
 
   const deleteData = async (_id) => {
     console.log(_id)
