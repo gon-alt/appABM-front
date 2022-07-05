@@ -9,7 +9,7 @@ export default function Home() {
 
       
       <Link href='/products/create'><button><h2>Crear producto</h2></button></Link>
-      <Link href='/products/delete'><button><h2>Eliminar producto</h2></button></Link>
+     
       <Link href='/products/getDB'><button><h2>Ver base de datos</h2></button></Link>
 
       </div>
