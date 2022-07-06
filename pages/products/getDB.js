@@ -1,6 +1,7 @@
 import {useRouter} from 'next/router'
 import Link from 'next/link'
 
+
 export async function getStaticProps(context) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/products`)
   const data = await res.json() 
@@ -37,6 +38,7 @@ function index({ data }){
         method: "DELETE",
       });
       router.push("/products/getDB");
+      
     } catch (error) {
       console.log(error);
     }
