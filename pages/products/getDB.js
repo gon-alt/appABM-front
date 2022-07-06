@@ -1,10 +1,9 @@
-// import {useRouter} from 'next/router'
+import {useRouter} from 'next/router'
 import Link from 'next/link'
 
 export async function getStaticProps(context) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/products`)
-  const data = await res.json()
-   
+  const data = await res.json() 
 
   if (!data) {
     return {
@@ -12,6 +11,7 @@ export async function getStaticProps(context) {
       redirect: {
         destination: '/',
         permanent: false,
+        
       },
     }
   }
@@ -28,7 +28,7 @@ export async function getStaticProps(context) {
   
 }
 function index({ data }){
-  // const router = useRouter();
+   const router = useRouter();
 
   const deleteData = async (_id) => {
     console.log(_id)
@@ -53,7 +53,7 @@ function index({ data }){
             <li>ID: {_id}</li>
             <li>Producto: {name}</li>
             <li>Precio: {price}</li>
-            <Link href={`${process.env.NEXT_PUBLIC_BACKEND_URL}/products/${_id}`}>
+            <Link href={`/products/edit`}>
             <button>Editar</button>
           </Link>
             <button

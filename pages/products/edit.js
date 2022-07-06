@@ -38,29 +38,26 @@ function Create() {
     <>
       <div>
         <h1>
-          <u>Crear nuevo producto</u>
+          <u> Editar producto id</u>
         </h1>
         <form>
-
           <input
             type='text'
             name='name'
-            placeholder = 'Nombre del producto'
             value={product.name}
             onChange={handleChange}
           />
           <input
             type='number'
             name='price'
-            placeholder = 'Precio del producto'
             value={product.price}
             onChange={handleChange}
           />
-          <button onClick={handleClick}>Crear producto</button>
+          <button onClick={handleClick}>Editar producto</button>
         </form>
         <div>
         <Link href='/'><button>Volver al inicio</button></Link>
-        <a href='/products/getDB'><button> Ver base de datos </button></a>
+        <Link href='/products/getDB'><button>Ver base de datos</button></Link>
         </div>
       </div>
       <style jsx>
